@@ -1,3 +1,5 @@
+package ru.geekbrains.homework1;
+
 import java.util.Scanner;
 
 public class MainProgram {
