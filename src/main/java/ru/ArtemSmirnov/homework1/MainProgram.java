@@ -1,4 +1,4 @@
-package ru.geekbrains.homework1;
+package ru.ArtemSmirnov.homework1;
 
 import java.util.Scanner;
 
