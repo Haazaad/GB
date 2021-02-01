@@ -1,10 +1,19 @@
 package ru.ArtemSmirnov.homework6.animals;
 
 public abstract class Animal {
+    static int animalsCount = 0;
     String type;
     String name;
     int maxRunDistance;
     int maxSwimDistance;
+
+    public Animal() {
+        animalsCount++;
+    }
+
+    public static int getAnimalsCount() {
+        return animalsCount;
+    }
 
     public void run(int distance) {
         if (distance <= maxRunDistance) {
