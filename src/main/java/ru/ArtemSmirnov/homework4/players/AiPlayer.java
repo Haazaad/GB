@@ -21,9 +21,9 @@ public class AiPlayer extends Player{
     public void chooseAiLevel(Scanner scanner) {
         int level;
         do {
-            System.out.println("Выберите сложность игры 0 или 1");
+            System.out.println("Выберите сложность игры 0, 1 или 2");
             level = scanner.nextInt();
-        } while (level != 0 && level != 1);
+        } while (level < 0 || level > 2);
         this.aiLevel = level;
     }
 
@@ -32,9 +32,26 @@ public class AiPlayer extends Player{
         x = 0;
         y = 0;
         boolean isHumanWin = false;
-        // повышенный уровень сложности с блокировкой хода игрока
-        // не особо работает для длины поля 5
-        // как вариант добавить дополнительно проверку ИИ на выигрыш
+        boolean isAiWin = false;
+        // ход ИИ с поиском выигрышной комбинацией
+        if (aiLevel == 2) {
+            for (int i = 0; i < map.getMapSize(); i++) {
+                char buffer;
+                for (int j = 0; j < map.getMapSize(); j++) {
+                    if (map.isValidOrEmpty(i, j)) {
+                        buffer = map.getDot(i, j);
+                        map.setDot(i, j, this.dot);
+                        if (map.checkWin(this.dot)) {
+                            x = j;
+                            y = i;
+                            isAiWin = true;
+                        }
+                        map.setDot(i, j, buffer);
+                    }
+                }
+            }
+        }
+        // ход ИИ с блокировкой хода игрока
         if (aiLevel == 1) {
             for (int i = 0; i < map.getMapSize(); i++) {
                 char buffer;
@@ -54,7 +71,7 @@ public class AiPlayer extends Player{
             }
         }
         // обычный ход ИИ
-        if (!isHumanWin) {
+        if (!isAiWin || !isHumanWin) {
             do {
                 x = random.nextInt(map.getMapSize());
                 y = random.nextInt(map.getMapSize());
