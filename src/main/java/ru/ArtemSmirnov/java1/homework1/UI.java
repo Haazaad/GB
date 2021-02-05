@@ -1,4 +1,4 @@
-package ru.ArtemSmirnov.homework1;
+package ru.ArtemSmirnov.java1.homework1;
 
 import java.util.Random;
 import java.util.Scanner;

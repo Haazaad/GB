@@ -1,4 +1,4 @@
-package ru.ArtemSmirnov.homework4.players;
+package ru.ArtemSmirnov.java1.homework4.players;
 
 public abstract class Player {
     char dot;

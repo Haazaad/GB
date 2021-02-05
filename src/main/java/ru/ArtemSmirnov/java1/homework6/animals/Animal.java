@@ -1,4 +1,4 @@
-package ru.ArtemSmirnov.homework6.animals;
+package ru.ArtemSmirnov.java1.homework6.animals;
 
 public abstract class Animal {
     static int animalsCount = 0;

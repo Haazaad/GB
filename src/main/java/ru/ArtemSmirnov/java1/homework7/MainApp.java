@@ -1,4 +1,4 @@
-package ru.ArtemSmirnov.homework7;
+package ru.ArtemSmirnov.java1.homework7;
 
 public class MainApp {
     public static void main(String[] args) {

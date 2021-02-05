@@ -1,4 +1,4 @@
-package ru.ArtemSmirnov.homework2;
+package ru.ArtemSmirnov.java1.homework2;
 
 import java.util.Arrays;
 

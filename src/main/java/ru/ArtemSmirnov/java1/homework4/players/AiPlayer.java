@@ -1,6 +1,6 @@
-package ru.ArtemSmirnov.homework4.players;
+package ru.ArtemSmirnov.java1.homework4.players;
 
-import ru.ArtemSmirnov.homework4.Map;
+import ru.ArtemSmirnov.java1.homework4.Map;
 
 import java.util.Random;
 import java.util.Scanner;

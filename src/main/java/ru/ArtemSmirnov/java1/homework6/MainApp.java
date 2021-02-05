@@ -1,6 +1,8 @@
-package ru.ArtemSmirnov.homework6;
+package ru.ArtemSmirnov.java1.homework6;
 
-import ru.ArtemSmirnov.homework6.animals.*;
+import ru.ArtemSmirnov.java1.homework6.animals.Animal;
+import ru.ArtemSmirnov.java1.homework6.animals.Cat;
+import ru.ArtemSmirnov.java1.homework6.animals.Dog;
 
 public class MainApp {
     public static void main(String[] args) {

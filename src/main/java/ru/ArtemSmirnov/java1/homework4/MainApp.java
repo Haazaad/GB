@@ -1,11 +1,11 @@
-package ru.ArtemSmirnov.homework4;
+package ru.ArtemSmirnov.java1.homework4;
 
-import ru.ArtemSmirnov.homework4.players.AiPlayer;
-import ru.ArtemSmirnov.homework4.players.HumanPlayer;
+import ru.ArtemSmirnov.java1.homework4.players.AiPlayer;
+import ru.ArtemSmirnov.java1.homework4.players.HumanPlayer;
 
 import java.util.Scanner;
 
-public class HomeWork_4 {
+public class MainApp {
     public static Map map = new Map();
     public static HumanPlayer humanPlayer;
     public static AiPlayer aiPlayer;

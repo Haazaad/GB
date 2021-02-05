@@ -1,4 +1,4 @@
-package ru.ArtemSmirnov.homework6.animals;
+package ru.ArtemSmirnov.java1.homework6.animals;
 
 public class Cat extends Animal {
     static int catsCount = 0;

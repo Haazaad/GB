@@ -1,4 +1,4 @@
-package ru.ArtemSmirnov.homework4;
+package ru.ArtemSmirnov.java1.homework4;
 
 import java.util.Scanner;
 
