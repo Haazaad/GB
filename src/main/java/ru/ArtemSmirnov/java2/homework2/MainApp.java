@@ -15,28 +15,24 @@ public class MainApp {
         }
     }
 
-    public static void getSumElement(String[][] array) throws MyArraySizeException {
+    public static void getSumElement(String[][] array) throws MyArraySizeException, MyArrayDataException {
         int sum = 0;
-        try {
-            if (array.length == 4 ) {
-                for (int i = 0; i < array.length; i++) {
-                    if (array[i].length != 4) {
-                        throw new MyArraySizeException("Не допустимый размер массива");
-                    }
-                    for (int j = 0; j < array[i].length; j++) {
-                        try {
-                            sum += Integer.parseInt(array[i][j]);
-                        } catch (NumberFormatException e) {
-                            throw new MyArrayDataException("Ошибка преобразования в число элемента массива " + array[i][j] + " с индексами " + i + " " + j);
-                        }
-                    }
-                }
-                System.out.println(sum);
-            } else {
+
+        if (array.length != 4) {
+            throw new MyArraySizeException("Не допустимый размер массива");
+        }
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].length != 4) {
                 throw new MyArraySizeException("Не допустимый размер массива");
             }
-        } catch (MyArraySizeException e) {
-            e.printStackTrace();
+            for (int j = 0; j < array[i].length; j++) {
+                try {
+                    sum += Integer.parseInt(array[i][j]);
+                } catch (NumberFormatException e) {
+                    throw new MyArrayDataException("Ошибка преобразования в число элемента массива " + array[i][j] + " с индексами " + i + " " + j);
+                }
+            }
         }
+        System.out.println(sum);
     }
 }
