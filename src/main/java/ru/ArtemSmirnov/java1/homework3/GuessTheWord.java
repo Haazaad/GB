@@ -2,7 +2,7 @@ package ru.ArtemSmirnov.java1.homework3;
 
 import java.util.Scanner;
 
-public class HomeWork_3 {
+public class GuessTheWord {
     static Scanner scanner = new Scanner(System.in);
     static String[] words = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot", "cherry", "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut", "pear", "pepper", "pineapple", "pumpkin", "potato"};
 
