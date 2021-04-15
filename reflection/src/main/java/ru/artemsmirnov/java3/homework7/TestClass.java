@@ -9,7 +9,8 @@ public class TestClass {
     private int a;
     private int b;
 
-    public TestClass() {}
+    public TestClass() {
+    }
 
     @BeforeSuite
     public void initialize() {
@@ -26,11 +27,32 @@ public class TestClass {
     }
 
     @Test(priority = 2)
-    public void getSum(int checkedSum) {
+    public void test1() {
         int sum = a + b;
-        if (sum == checkedSum) {
+        if (sum == 11) {
             System.out.println(true);
+        } else {
+            System.out.println(false);
         }
-        System.out.println(false);
+    }
+
+    @Test(priority = 2)
+    public void test2() {
+        System.out.println(a > 1);
+    }
+
+    @Test
+    public void test5() {
+        System.out.println(b > 10);
+    }
+
+    @Test
+    public void test6() {
+        System.out.println("Просто вывод в консоль");
+    }
+
+    @Test(priority = 1)
+    public void test7() {
+        System.out.println("Самый высокий приоритет");
     }
 }
