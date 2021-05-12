@@ -44,29 +44,18 @@ public class Game extends JFrame {
         southPanel.add(newGame);
         southPanel.add(exitGame);
 
-        newGame.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                logic = new GameLogic();
-                outputField.setText(null);
-            }
+        newGame.addActionListener(e -> {
+            logic = new GameLogic();
+            outputField.setText(null);
         });
 
-        exitGame.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
+        exitGame.addActionListener(e -> System.exit(0));
 
-        inputField.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                logic.setInputWord(inputField.getText());
-                logic.game();
-                outputField.append(logic.getOutputString() + "\n");
-                inputField.setText("");
-            }
+        inputField.addActionListener(e -> {
+            logic.setInputWord(inputField.getText());
+            logic.game();
+            outputField.append(logic.getOutputString() + "\n");
+            inputField.setText("");
         });
 
         setVisible(true);

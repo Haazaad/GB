@@ -26,8 +26,8 @@ public class MainApp {
     }
 
     // Task № 1
-    public static <A extends Object> void replaceElementArray(A[] array, int initialIndex, int replaceIndex) {
-        A buff = array[replaceIndex];
+    public static void replaceElementArray(Object[] array, int initialIndex, int replaceIndex) {
+        Object buff = array[replaceIndex];
         array[replaceIndex] = array[initialIndex];
         array[initialIndex] = buff;
     }
